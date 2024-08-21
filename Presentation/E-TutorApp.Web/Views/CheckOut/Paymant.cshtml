@@ -1,0 +1,44 @@
+﻿@* Id = c.Id,
+                Title = c.Title,
+                Subtitle = c.Subtitle,
+                Subtitle = c.SaleCount,
+                Rating = c.RatingScore,
+                ImgUrl = c.AdvanceInfos!.ThumbnailUrl,
+                CategoryName = c!.Category!.Name, *@
+
+
+                @model List<CourseBasicInfoViewModel>
+
+<table class="table table-responsive table-bordered " style="width:100%">
+
+    <tr>
+        <th>Title</th>
+        <th>Subtitle</th>
+        <th>SaleCount</th>
+        <th>Rating</th>
+        <th>ImgUrl</th>
+        <th>CategoryName</th>
+    </tr>
+
+    @foreach(var course in Model)
+    {
+        <tr>
+            <th>@course.Title</th>
+            <th>@course.Subtitle</th>
+            <th>@course.Salecount</th>
+            <th>@course.Rating</th>
+            <th> <img src="@course.ImgUrl" style="width:130px;height:150px;" alt="CourseImg" />  </th>
+            <th>@course.CategoryName</th>
+        </tr>
+    }
+
+    
+
+
+
+
+
+
+
+
+</table>

@@ -1,0 +1,55 @@
+﻿@model CourseCreateBasicsViewModel
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Subtitle"></label>
+        <input asp-for="Subtitle" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Topic"></label>
+        <input asp-for="Topic" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Duration"></label>
+        <input asp-for="Duration" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DurationUnit"></label>
+        <select asp-for="DurationUnit" class="form-control" asp-items="@(new SelectList(ViewBag.DurationUnits))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Language"></label>
+        <select asp-for="Language" class="form-control" asp-items="@(new SelectList(ViewBag.Languages))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SubtitleLanguage"></label>
+        <select asp-for="SubtitleLanguage" class="form-control" asp-items="@(new SelectList(ViewBag.SubtitleLanguages))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="CategoryName"></label>
+        <select asp-for="CategoryName" class="form-control" asp-items="@(new SelectList(ViewBag.Categories))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="SubCategoryName"></label>
+        <select asp-for="SubCategoryName" class="form-control" asp-items="@(new SelectList(ViewBag.Subcategories))"></select>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Level"></label>
+        <select asp-for="Level" class="form-control" asp-items="@(new SelectList(ViewBag.Levels))"></select>
+    </div>
+
+    <button type="submit" class="btn btn-primary" asp-action="CreateCourseBasicInformation" asp-controller="Course">Save and Next</button>
+</form>

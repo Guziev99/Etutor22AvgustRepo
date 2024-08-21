@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Payment Success";
+    var basicId = TempData["basicId"] as string;
+}
+
+
+<h2>Payment Completed Successfully!</h2>
+<p>Thank you for your payment. You can now watch the course.</p>
+
+<div>
+    <a asp-controller="Course" asp-action="CourseIzle" asp-route-curId="@basicId">
+        Go To Course Curriculum
+    </a>
+</div>
+
+

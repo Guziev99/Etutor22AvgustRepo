@@ -1,0 +1,21 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+<link href="~/css/errorpagestyle.css" rel="stylesheet" />
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-6 textCol">
+            <div class="errorTextSide">
+                <p class="headerText">Error 404</p>
+                <h1>Oops! page not found</h1>
+                <p class="errormessage">Something went wrong. It’s look that your requested could not be found. It's look like the link is broken or the page is removed.</p>
+                <button>Go Back</button>
+
+            </div>
+        </div>
+        <div class="col-sm-6 imageside">
+            <img src="~/images/errorimage.svg" class="ErrorImage" />
+        </div>
+    </div>
+</div>
